@@ -1,7 +1,7 @@
 # stm32_challenge_1
 
 1. Fork this repository
-2. Copy the blink_orig to a folder identifying your Youtube user id
+2. Copy the currentmakers to a folder identifying your Youtube user id
 3. Modify as you please to produce the smallest possible firmware.bin
 4. Commit and push
 5. Send link in comment on the annoucement video
