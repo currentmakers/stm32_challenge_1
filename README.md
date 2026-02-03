@@ -1,4 +1,4 @@
-# stm32_challenge_1
+# STM32World and CurrentMakers Challenge 1
 
 1. Fork this repository
 2. Copy the currentmakers to a folder identifying your Youtube user id
