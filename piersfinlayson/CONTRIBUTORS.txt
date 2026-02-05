@@ -1,0 +1,6 @@
+Copyright Piers Finlayson, piers@piers.rocks
+
+https://www.youtube.com/@piers_rocks
+https://piers.rocks
+
+For commented version of this program, see: https://github.com/piersfinlayson/stm32-tiny-blink
