@@ -1,6 +1,6 @@
 ### Codegolfed blinky for a challenge by Lars Thomsen from stm32world 
 
-Final size : 40b
+Final size : 26b
 
 To build write
 ```shell
@@ -13,6 +13,7 @@ make flash
 ```
 If you are using ST's flashers just flash the binary at 0x08000000 
 
+Thanks to [Piers Finlayson](https://github.com/piersfinlayson/) for his solution 
 
 Made by freeman1216 
 
