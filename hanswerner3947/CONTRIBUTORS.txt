@@ -1,3 +1,6 @@
 No Copyright
 
 2026-02-22 Stephan Hirt, steff@thebackend.de
+
+This solution was inspired by the solution posted by freeman1216.
+Thanks to mars3142 for telling me about the challenge.
