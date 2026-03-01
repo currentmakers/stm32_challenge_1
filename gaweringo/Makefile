@@ -1,0 +1,31 @@
+
+CFLAGS  ?=  -W -Wall -Wextra -Werror -Wundef -Wshadow -Wdouble-promotion \
+	-Wformat-truncation -fno-common -Wconversion \
+	-g3 -Oz -ffunction-sections -fdata-sections -I. \
+	-mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 $(EXTRA_CFLAGS)
+
+LDFLAGS ?= -Tf407.ld -nostartfiles -nostdlib --specs nano.specs -lc -lgcc -Wl,--gc-sections -Wl,-Map=$@.map
+
+SOURCES = main.c
+
+all: firmware.bin size
+
+firmware.elf: $(SOURCES)
+	arm-none-eabi-gcc $(SOURCES) $(CFLAGS) $(LDFLAGS) -o $@
+
+firmware.bin: firmware.elf
+	arm-none-eabi-objcopy -O binary $< $@
+
+flash: firmware.bin
+	st-flash --reset write $< 0x8000000
+
+size: firmware.elf
+	arm-none-eabi-size $^
+
+clean:
+	rm -rf firmware.*
+
+disasm:
+	arm-none-eabi-objdump -d -S .\firmware.elf --disassembler-color=on
+
+.PHONY: all clean flash disasm size
